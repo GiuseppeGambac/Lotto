@@ -7,7 +7,12 @@ class Ticket():
         self.numberquantity = numberquanity
         self.gametype = gametype
         self.city = city
-        #Here the numbers are generated in a list using random.sample
+        
+        # there is a limit in the program but i prefer have another limit here inside the object
+        if self.numberquantity > 10:
+            self.numberquantity = 10
+            print("limiteraggiunto")
+        #Here the numbers are generated in a list using random.sample    
         self.numberlist =  self.numberlist = random.sample(range(1,91), self.numberquantity)
         
     
@@ -20,7 +25,7 @@ class Ticket():
         
     
             
-        
+prova = Ticket(15,"ciao","culo")        
     
 type_of_game = ('ambata', 'ambo', 'terno', 'quaterna', 'cinquina') 
 city = ('Bari', 'Cagliari', 'Firenze', 'Genova', 'Milano', 'Napoli', 'Palermo', 'Roma', 'Torino', 'Venezia', 'Tutte')  

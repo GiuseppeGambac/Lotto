@@ -24,21 +24,31 @@ class Ticket():
     
 type_of_game = ('ambata', 'ambo', 'terno', 'quaterna', 'cinquina') 
 city = ('Bari', 'Cagliari', 'Firenze', 'Genova', 'Milano', 'Napoli', 'Palermo', 'Roma', 'Torino', 'Venezia', 'Tutte')  
-tickets = []    
+#list of tickets
+tickets = [] 
 
 
-
-for i in range(5):
+   
+while True:
+    try:
+        ticketsnumber = int(input(("quanti biglietti vuoi generare? ")))
+        break
+    except:
+        print("inserisci un numero")
+    
+for i in range(ticketsnumber):
  input_number = 0
  input_game =""
  input_city = ""
+ #number selection
  while input_number <= 0 or input_number > 10:   
   try:
    input_number = int(input('inserisci un numero fra 1 e 10:'))
   except:
       print("devi inserire un numero")
-  
-  while True:
+      
+
+ while True:
       print("seleziona un tipo di puntata fra quelli elencati")
       print(type_of_game)    
       input_game = input()
@@ -57,7 +67,7 @@ for i in range(5):
       else:
           print('valore non presente')
           input_city ==""
-
+ 
  tickets.append(Ticket(input_number,input_game,input_city))
  tickets[i].printTicket()
 

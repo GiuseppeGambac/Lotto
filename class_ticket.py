@@ -109,9 +109,12 @@ class Ticket():
           total = self.money * moneyquaterna
         elif self.gametype == "cinquina":
           total= self.money * moneycinquina
-           
+        if total > 500:
+            withtax = total *0.92
+            return total,withtax
+        else:   
        
-        return total
+         return total
         
         
     

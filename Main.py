@@ -15,8 +15,8 @@ if __name__ == '__main__':
  
     
     
-generatore = Generator(gametypes,cities)
-    
-generatore.ticketsGeneration()
-generatore.printTicket()
+ generatore = Generator(gametypes,cities)
+     
+ generatore.ticketsGeneration()
+ generatore.printTicket()
          

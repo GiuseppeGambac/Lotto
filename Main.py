@@ -1,5 +1,5 @@
 from TicketGenerator import Generator
-
+from estraction import Estractor
 
 
                 
@@ -13,10 +13,19 @@ if __name__ == '__main__':
  gametypes = ('ambata', 'ambo', 'terno', 'quaterna', 'cinquina') 
  cities = ('Bari', 'Cagliari', 'Firenze', 'Genova', 'Milano', 'Napoli', 'Palermo', 'Roma', 'Torino', 'Venezia', 'Tutte')  
  
+ # a list for every city
+ wheel ={"Bari":[] , "Cagliari" : [] ,'Firenze': [], 'Genova' : [], 'Milano' : [], 'Napoli' : [], 'Palermo' : [], 'Roma' : [], 'Torino' : [], 'Venezia' : [], 'Tutte' : []}
     
     
- generatore = Generator(gametypes,cities)
-     
- generatore.ticketsGeneration()
- generatore.printTicket()
+
+
+ Gen = Generator(gametypes,cities)
+
+ Gen.ticketsGeneration()
+ Gen.printTicket()
+
+ Sort = Estractor(wheel,Gen.tickets)
+   
+ print(Sort.checkWinner().WinningMoney())
+
          

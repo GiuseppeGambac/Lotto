@@ -45,6 +45,7 @@ class Generator():
      input_number = 0
      input_game =""
      input_city = ""
+     money = 0
      
      # select the type of game
      while True:
@@ -66,6 +67,13 @@ class Generator():
        input_number = int(input('inserisci un numero fra %d e 10:' % minimum))
       except:
           print("devi inserire un numero")
+          
+    #money selection
+     while money == 0:   
+        try:
+            money = int(input('inserisci la scommessa:'))
+        except:
+               print("devi inserire un numero")
       
      # cities selection
      while True:
@@ -79,7 +87,7 @@ class Generator():
           input_city ==""
  
      # add the ticket at the list
-     self.tickets.append(Ticket(input_number,input_game,input_city))
+     self.tickets.append(Ticket(input_number,money,input_game,input_city))
  
      
     return self.tickets

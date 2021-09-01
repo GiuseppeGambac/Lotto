@@ -41,21 +41,7 @@ class Ticket():
         
         
     
-        """
-        +----------+----------+-----------------------------+--------+
-    | TICKET N |    BET   |            NUMBERS          |  CITY  |
-    +----------+----------+-----------------------------+--------+
-    | TICKET 1 | QUATERNA |       12 20 39 56 55 3      | TORINO |
-    +----------+----------+-----------------------------+--------+
-    | TICKET 2 |   AMBO   | 12 20 39 56 55 31 67 90 2 9 | TUTTE  |
-    +----------+----------+-----------------------------+--------+
-    """
+
     
-    def printTicket(self):           # da migliorare
-        "print the ticket"
-        #dovrei sistemare la tabella
-        print('+--------+---------+------------------------+----------------+')
-        print('|%s|   |%s|'  %(self.city,self.gametype))
-        for i in range(len(self.numberlist)):
-         print('|%d|' %self.numberlist[i])
+ 
          
